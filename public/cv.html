@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Phan Huy Kha - CV</title>
+<style>
+  @page {
+    size: A4;
+    margin: 14mm 16mm 12mm 16mm;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #000;
+    font-size: 10pt;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .name {
+    font-size: 18pt;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+  }
+  .title {
+    font-size: 10.5pt;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1px;
+  }
+  .contact {
+    font-size: 9.5pt;
+    color: #444;
+    margin-top: 3px;
+  }
+  h2 {
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 12px 0 3px 0;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #333;
+  }
+  .summary { margin: 9px 0 0 0; }
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 5px;
+  }
+  .entry-head .org { font-weight: bold; }
+  .entry-head .meta { font-style: italic; color: #333; font-size: 9.5pt; }
+  ul {
+    margin: 3px 0 0 0;
+    padding-left: 17px;
+  }
+  li { margin-bottom: 2px; }
+  a { color: #1155cc; text-decoration: none; }
+  .skills { list-style: none; padding-left: 0; margin: 4px 0 0 0; }
+  .skills li { margin-bottom: 2px; }
+  .skills .k { font-weight: bold; }
+  strong { font-weight: bold; }
+</style>
+</head>
+<body>
+
+  <div class="name">Phan Huy Kha</div>
+  <div class="title">Full-Stack Software Engineer</div>
+  <div class="contact">
+    Da Nang, Vietnam &nbsp;&bull;&nbsp; +84 365 854 213 &nbsp;&bull;&nbsp; khaphan2806@gmail.com
+  </div>
+
+  <h2>Summary</h2>
+  <p class="summary">
+    Full-stack software engineer with 4 years of experience building and shipping end-to-end web
+    products, from modern React/Vue SPAs to Node.js and NestJS backends with their data pipelines.
+    Experienced across third-party API integrations and analytics-grade data platforms, working
+    directly with clients and cross-cultural teams.
+  </p>
+
+  <h2>Experience</h2>
+  <div class="entry-head">
+    <div><span class="org">KeyReply</span> &mdash; Software Engineer</div>
+    <div class="meta">Singapore (Remote) | Aug 2021 - Present</div>
+  </div>
+  <ul>
+    <li>Develop and maintain full-stack chatbot products across the stack using <strong>Node.js</strong>,
+      <strong>Vue.js</strong>, and <strong>React</strong>, within an Agile delivery team.</li>
+    <li>Designed and shipped a standalone AI-powered voice-calling product with <strong>NuxtJS</strong>,
+      integrating the third-party <strong>VAPI</strong> platform.</li>
+    <li>Integrated the <strong>WhatsApp Cloud API</strong> to add new messaging channels to
+      chatbot products.</li>
+    <li>Partnered directly with clients (Singapore, Malaysia) and cross-cultural teams (Singapore,
+      Indonesia, Vietnam) to turn complex requirements into shipped features.</li>
+    <li>Refactored legacy UI and delivered new interfaces, improving maintainability and resolving
+      longstanding component issues.</li>
+  </ul>
+
+  <h2>Projects</h2>
+  <div class="entry-head">
+    <div class="org">Danang Fantasticity Analytics &mdash; Marketing Analytics Dashboard</div>
+  </div>
+  <ul>
+    <li>Built a full-stack internal dashboard unifying <strong>GA4</strong>, <strong>Facebook</strong>,
+      and <strong>TikTok</strong> marketing data into one normalized reporting platform &mdash;
+      <strong>React 19</strong>/<strong>Vite</strong>/<strong>TanStack</strong>/<strong>Tailwind</strong>
+      frontend, <strong>NestJS</strong>/<strong>Drizzle ORM</strong>/<strong>PostgreSQL</strong> backend.</li>
+    <li>Implemented scheduled provider-sync workers (<strong>BullMQ</strong>, <strong>Redis</strong>)
+      and integrated external provider APIs behind a shared analytics contract; deployed as a
+      <strong>Docker Compose</strong> stack (Nginx, API, PostgreSQL, Redis).</li>
+  </ul>
+  <div class="entry-head">
+    <div class="org">Da Nang Fantasticity &mdash; Official Tourism Portal</div>
+    <div class="meta"><a href="https://danangfantasticity.com">danangfantasticity.com</a></div>
+  </div>
+  <ul>
+    <li>Led end-to-end frontend development of Da Nang's official tourism site from scratch with
+      <strong>Next.js</strong>, consuming a <strong>WordPress</strong> headless API with multi-language
+      support (English, Vietnamese, Korean, Chinese) for a global audience.</li>
+  </ul>
+
+  <h2>Technical Skills</h2>
+  <ul class="skills">
+    <li><span class="k">Languages:</span> JavaScript, TypeScript, SQL</li>
+    <li><span class="k">Frontend:</span> React, Vue, Next.js, Nuxt.js, TanStack Router/Query, Zustand, Tailwind CSS, Recharts</li>
+    <li><span class="k">Backend:</span> Node.js, NestJS, Express.js, Drizzle ORM, BullMQ, REST APIs</li>
+    <li><span class="k">Data &amp; Infra:</span> PostgreSQL, Redis, Docker, Nginx</li>
+    <li><span class="k">Integrations &amp; AI:</span> GA4 Data API, Meta Graph/Marketing API, TikTok API, WhatsApp Cloud API, VAPI</li>
+  </ul>
+
+  <h2>Education</h2>
+  <div class="entry-head">
+    <div class="org">FPT Polytechnic College</div>
+    <div class="meta">Ho Chi Minh City | Jan 2020 - May 2023</div>
+  </div>
+  <ul>
+    <li>Diploma in Software Engineering &mdash; GPA 4.1/5.0</li>
+  </ul>
+
+</body>
+</html>

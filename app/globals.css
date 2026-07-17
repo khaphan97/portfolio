@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-ink: #08090b;
+  --color-surface: #0f1216;
+  --color-surface-2: #141821;
+  --color-line: #222732;
+
+  /* Text */
+  --color-fg: #e7eaee;
+  --color-fg-muted: #97a0ad;
+
+  /* Accent */
+  --color-accent: #2dd4bf;
+  --color-accent-2: #38bdf8;
+
+  /* Fonts (wired to next/font CSS variables in layout.tsx) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jb), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 32%, transparent);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-ink);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2f3a;
+    border-radius: 9999px;
+    border: 2px solid var(--color-ink);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a4150;
+  }
+}
+
+/* Subtle grid used behind the hero */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
