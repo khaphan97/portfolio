@@ -19,6 +19,7 @@ export const stats = [
 
 export type Experience = {
   org: string;
+  url?: string;
   role: string;
   meta: string;
   location: string;
@@ -27,7 +28,8 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    org: "KeyReply",
+    org: "Rezonate",
+    url: "https://getrezonate.com/Rezonate.dc",
     role: "Software Engineer",
     meta: "Aug 2021 — Present",
     location: "Singapore (Remote)",
@@ -84,12 +86,12 @@ export const projects: Project[] = [
     name: "WhatsApp Portal",
     tagline: "WhatsApp Business API onboarding",
     description:
-      "Self-service onboarding and management platform for the WhatsApp Business API, built for KeyReply as a Meta Business Support Partner. Handles WABA onboarding via Facebook Embedded Signup, phone-number management, partner tokens, and admin controls.",
+      "Self-service onboarding and management platform for the WhatsApp Business API, built for Rezonate as a Meta Business Support Partner. Handles WABA onboarding via Facebook Embedded Signup, phone-number management, partner tokens, and admin controls.",
     tags: ["NestJS", "React 19", "Prisma", "PostgreSQL", "Auth0", "Ant Design", "Docker / AKS"],
     private: true,
   },
   {
-    name: "KeyReply v2",
+    name: "Rezonate v2",
     tagline: "Enterprise AI platform",
     description:
       "Enterprise-grade AI platform for assistant management, multi-channel communication (chat, calls, SMS, email), knowledge-base integration, and analytics — with multi-tenant deployments across Cloudflare Workers and Azure Kubernetes.",

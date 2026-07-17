@@ -15,7 +15,18 @@ export function Experience() {
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <h3 className="text-lg font-semibold tracking-tight">
                 {job.role} <span className="text-fg-muted">·</span>{" "}
-                <span className="text-accent">{job.org}</span>
+                {job.url ? (
+                  <a
+                    href={job.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
+                  >
+                    {job.org}
+                  </a>
+                ) : (
+                  <span className="text-accent">{job.org}</span>
+                )}
               </h3>
               <span className="font-mono text-xs text-fg-muted">{job.meta}</span>
             </div>
