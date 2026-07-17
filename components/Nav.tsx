@@ -44,9 +44,8 @@ export function Nav() {
             </a>
           ))}
           <a
-            href="/cv.html"
-            target="_blank"
-            rel="noreferrer"
+            href="/PhanHuyKha-CV.pdf"
+            download="PhanHuyKha-CV.pdf"
             className="rounded-full border border-line px-4 py-1.5 text-sm text-fg transition-colors hover:border-accent hover:text-accent"
           >
             Résumé
@@ -86,13 +85,12 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="/cv.html"
-              target="_blank"
-              rel="noreferrer"
+              href="/PhanHuyKha-CV.pdf"
+              download="PhanHuyKha-CV.pdf"
               onClick={() => setOpen(false)}
               className="mt-1 rounded-lg px-2 py-2.5 text-sm text-accent"
             >
-              Résumé ↗
+              Résumé ↓
             </a>
           </div>
         </div>

@@ -27,13 +27,25 @@ npm run start
 ## Editing content
 
 All copy lives in one place — [`lib/data.ts`](lib/data.ts). Update the
-`profile`, `stats`, `experience`, `projects`, `skills`, and `education`
-objects there and the page updates automatically. No component changes needed
-for routine content edits.
+`profile`, `stats`, `experience`, `projects`, and `skills` objects there and
+the page updates automatically. No component changes needed for routine content
+edits.
 
-The downloadable résumé is served from [`public/cv.html`](public/cv.html) —
-replace that file to update the "Résumé" link. Swap in a PDF and update the
-`href` in `components/Nav.tsx` if you prefer a PDF résumé.
+### Résumé
+
+The "Résumé" nav button downloads [`public/PhanHuyKha-CV.pdf`](public/PhanHuyKha-CV.pdf)
+(via the `download` attribute in `components/Nav.tsx`). The PDF is generated
+from the source [`public/cv.html`](public/cv.html). After editing the HTML,
+regenerate the PDF with headless Chrome:
+
+```bash
+chrome --headless=new --disable-gpu --no-pdf-header-footer \
+  --print-to-pdf="public/PhanHuyKha-CV.pdf" \
+  "file:///ABSOLUTE/PATH/TO/public/cv.html"
+```
+
+The HTML uses `@page` (A4) margins for print and an `@media screen` block for
+comfortable on-screen viewing, so the PDF output stays clean regardless.
 
 ## Project structure
 

@@ -96,20 +96,12 @@ export const projects: Project[] = [
     tags: ["Nuxt 4", "TypeScript", "Cloudflare Workers", "Drizzle ORM", "PostgreSQL", "Docker / AKS"],
     private: true,
   },
-  {
-    name: "SemanticService",
-    tagline: "AI semantic backend",
-    description:
-      "A .NET backend service powering KeyReply's assistant stack, exposing real-time SignalR hubs and a pluggable AI plugin architecture behind a clean, testable service layer.",
-    tags: ["C#", ".NET", "ASP.NET Core", "SignalR", "Docker"],
-    private: true,
-  },
 ];
 
 export type SkillGroup = { label: string; items: string[] };
 
 export const skills: SkillGroup[] = [
-  { label: "Languages", items: ["TypeScript", "JavaScript", "SQL", "C#"] },
+  { label: "Languages", items: ["TypeScript", "JavaScript", "SQL"] },
   {
     label: "Frontend",
     items: [
@@ -126,7 +118,7 @@ export const skills: SkillGroup[] = [
   },
   {
     label: "Backend",
-    items: ["Node.js", "NestJS", "Express.js", "Drizzle ORM", "Prisma", "BullMQ", "ASP.NET Core", "REST APIs"],
+    items: ["Node.js", "NestJS", "Express.js", "Drizzle ORM", "Prisma", "BullMQ", "REST APIs"],
   },
   { label: "Data & Infra", items: ["PostgreSQL", "Redis", "Docker", "Nginx", "Cloudflare Workers", "Azure (AKS)"] },
   {
