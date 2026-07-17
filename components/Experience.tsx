@@ -1,14 +1,15 @@
 import { experience } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
+import { Stagger, StaggerItem } from "./motion";
 
 export function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-5xl scroll-mt-24 px-5 py-20 sm:py-24">
       <SectionHeading index="02" title="Experience" />
 
-      <div className="space-y-8">
+      <Stagger className="space-y-8">
         {experience.map((job) => (
-          <article
+          <StaggerItem
             key={job.org}
             className="relative rounded-2xl border border-line bg-surface/40 p-6 sm:p-8"
           >
@@ -40,9 +41,9 @@ export function Experience() {
                 </li>
               ))}
             </ul>
-          </article>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </section>
   );
 }

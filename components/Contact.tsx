@@ -1,5 +1,6 @@
 import { profile } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
+import { Stagger, StaggerItem } from "./motion";
 import { GitHubIcon, MailIcon } from "./icons";
 
 export function Contact() {
@@ -17,24 +18,28 @@ export function Contact() {
             subtitle="Open to full-stack and frontend roles, freelance work, and interesting collaborations. The fastest way to reach me is email."
           />
 
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-ink transition-opacity hover:opacity-90"
-            >
-              <MailIcon className="h-4 w-4" />
-              {profile.email}
-            </a>
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
-            >
-              <GitHubIcon className="h-4 w-4" />
-              GitHub
-            </a>
-          </div>
+          <Stagger className="flex flex-wrap gap-3">
+            <StaggerItem>
+              <a
+                href={`mailto:${profile.email}`}
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-ink transition-opacity hover:opacity-90"
+              >
+                <MailIcon className="h-4 w-4" />
+                {profile.email}
+              </a>
+            </StaggerItem>
+            <StaggerItem>
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
+              >
+                <GitHubIcon className="h-4 w-4" />
+                GitHub
+              </a>
+            </StaggerItem>
+          </Stagger>
         </div>
       </div>
     </section>

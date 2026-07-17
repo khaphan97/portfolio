@@ -1,5 +1,6 @@
 import { projects, type Project } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
+import { Stagger, StaggerItem } from "./motion";
 import { ArrowUpRightIcon, LockIcon } from "./icons";
 
 function ProjectCard({ project }: { project: Project }) {
@@ -68,11 +69,13 @@ export function Projects() {
         title="Selected projects"
         subtitle="A mix of client and product work — analytics platforms, multi-language sites, and API-integration tooling. Several repositories are private or proprietary."
       />
-      <div className="grid gap-5 sm:grid-cols-2">
+      <Stagger className="grid gap-5 sm:grid-cols-2">
         {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
+          <StaggerItem key={project.name} className="h-full">
+            <ProjectCard project={project} />
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </section>
   );
 }
