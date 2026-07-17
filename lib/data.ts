@@ -50,14 +50,12 @@ export type Project = {
   tags: string[];
   link?: { href: string; label: string };
   private?: boolean;
-  featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
     name: "Danang Fantasticity Analytics",
     tagline: "Marketing analytics dashboard",
-    featured: true,
     description:
       "Full-stack internal dashboard unifying GA4, Facebook, Instagram, and TikTok marketing data into one normalized reporting platform. A role-protected, CDP-style workspace with scheduled provider-sync workers, user management, and audit logging.",
     tags: [
@@ -76,7 +74,6 @@ export const projects: Project[] = [
   {
     name: "Da Nang Fantasticity",
     tagline: "Official tourism portal",
-    featured: true,
     description:
       "Led end-to-end frontend development of Da Nang's official tourism site from scratch — a multi-language experience (Vietnamese, English, Japanese, Chinese, Korean, Russian) built on Next.js and consuming a headless WordPress API, with Mapbox maps and Auth0 authentication.",
     tags: ["Next.js 14", "TypeScript", "WordPress (headless)", "Tailwind CSS", "next-intl", "Mapbox", "Auth0"],

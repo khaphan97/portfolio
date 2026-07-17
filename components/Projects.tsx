@@ -4,11 +4,7 @@ import { ArrowUpRightIcon, LockIcon } from "./icons";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <article
-      className={`group relative flex flex-col rounded-2xl border border-line bg-surface/50 p-6 transition-colors hover:border-accent/40 hover:bg-surface ${
-        project.featured ? "lg:col-span-3" : "lg:col-span-2"
-      }`}
-    >
+    <article className="group relative flex h-full flex-col rounded-2xl border border-line bg-surface/50 p-6 transition-colors hover:border-accent/40 hover:bg-surface">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-lg font-semibold tracking-tight">{project.name}</h3>
@@ -50,7 +46,7 @@ function ProjectCard({ project }: { project: Project }) {
         </a>
       )}
 
-      <ul className="mt-5 flex flex-wrap gap-2">
+      <ul className="mt-auto flex flex-wrap gap-2 pt-5">
         {project.tags.map((tag) => (
           <li
             key={tag}
@@ -72,7 +68,7 @@ export function Projects() {
         title="Selected projects"
         subtitle="A mix of client and product work — analytics platforms, multi-language sites, and API-integration tooling. Several repositories are private or proprietary."
       />
-      <div className="grid gap-5 lg:grid-cols-6">
+      <div className="grid gap-5 sm:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
