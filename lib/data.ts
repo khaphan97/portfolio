@@ -134,14 +134,3 @@ export const skills: SkillGroup[] = [
     items: ["GA4 Data API", "Meta Graph / Marketing API", "TikTok API", "WhatsApp Cloud API", "VAPI", "Auth0"],
   },
 ];
-
-export type Education = { org: string; meta: string; location: string; detail: string };
-
-export const education: Education[] = [
-  {
-    org: "FPT Polytechnic College",
-    meta: "Jan 2020 — May 2023",
-    location: "Ho Chi Minh City",
-    detail: "Diploma in Software Engineering — GPA 4.1 / 5.0",
-  },
-];

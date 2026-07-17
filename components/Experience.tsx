@@ -1,4 +1,4 @@
-import { experience, education } from "@/lib/data";
+import { experience } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
 
 export function Experience() {
@@ -30,25 +30,6 @@ export function Experience() {
               ))}
             </ul>
           </article>
-        ))}
-      </div>
-
-      <h3 className="mt-12 mb-5 font-mono text-xs uppercase tracking-wider text-fg-muted">Education</h3>
-      <div className="space-y-4">
-        {education.map((edu) => (
-          <div
-            key={edu.org}
-            className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 rounded-2xl border border-line bg-surface/40 p-6"
-          >
-            <div>
-              <h4 className="font-semibold tracking-tight">{edu.org}</h4>
-              <p className="mt-1 text-sm text-fg-muted">{edu.detail}</p>
-            </div>
-            <div className="text-right">
-              <span className="font-mono text-xs text-fg-muted">{edu.meta}</span>
-              <p className="text-xs text-fg-muted">{edu.location}</p>
-            </div>
-          </div>
         ))}
       </div>
     </section>
