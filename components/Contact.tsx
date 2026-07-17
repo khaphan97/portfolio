@@ -1,6 +1,6 @@
 import { profile } from "@/lib/data";
 import { SectionHeading } from "./SectionHeading";
-import { GitHubIcon, MailIcon, PhoneIcon } from "./icons";
+import { GitHubIcon, MailIcon } from "./icons";
 
 export function Contact() {
   return (
@@ -24,13 +24,6 @@ export function Contact() {
             >
               <MailIcon className="h-4 w-4" />
               {profile.email}
-            </a>
-            <a
-              href={`tel:${profile.phone.replace(/\s/g, "")}`}
-              className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-accent hover:text-accent"
-            >
-              <PhoneIcon className="h-4 w-4" />
-              {profile.phone}
             </a>
             <a
               href={profile.github}

@@ -3,7 +3,6 @@ export const profile = {
   title: "Full-Stack Software Engineer",
   location: "Da Nang, Vietnam",
   email: "khaphan2806@gmail.com",
-  phone: "+84 365 854 213",
   github: "https://github.com/khaphan97",
   githubHandle: "khaphan97",
   summary:
