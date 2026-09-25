@@ -24,6 +24,13 @@ npm run build
 npm run start
 ```
 
+## Checks
+
+```bash
+npm run lint    # ESLint (eslint-config-next)
+npm run build   # Type-check + production build
+```
+
 ## Editing content
 
 All copy lives in one place — [`lib/data.ts`](lib/data.ts). Update the
