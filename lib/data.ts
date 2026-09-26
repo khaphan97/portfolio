@@ -121,6 +121,6 @@ export const skills: SkillGroup[] = [
   { label: "Data & Infra", items: ["PostgreSQL", "Redis", "Docker", "Nginx", "Cloudflare Workers", "Azure (AKS)"] },
   {
     label: "Integrations & AI",
-    items: ["GA4 Data API", "Meta Graph / Marketing API", "TikTok API", "WhatsApp Cloud API", "VAPI", "Auth0"],
+    items: ["GA4 Data API", "Meta Graph / Marketing API", "TikTok API", "WhatsApp Cloud API", "Auth0"],
   },
 ];
