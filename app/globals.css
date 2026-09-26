@@ -20,7 +20,7 @@
   --color-fg-muted: #97a0ad;
 
   /* Accent */
-  --color-accent: #2dd4bf;
+  --color-accent: #3b82f6;
   --color-accent-2: #38bdf8;
 
   /* Fonts (wired to next/font CSS variables in layout.tsx) */
@@ -50,7 +50,7 @@
   --color-fg: #0e1116;
   --color-fg-muted: #566070;
 
-  --color-accent: #0f766e;
+  --color-accent: #2563eb;
   --color-accent-2: #0369a1;
 
   --grid-line: rgba(15, 23, 42, 0.06);
