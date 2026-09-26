@@ -1,6 +1,8 @@
 # Phan Huy Kha — Portfolio
 
-Personal portfolio site. A single-page, dark, minimal design built with Next.js 15 (App Router), TypeScript, and Tailwind CSS v4.
+Personal portfolio site. A single-page, minimal design with light and dark
+themes (dark by default, switchable from the nav) built with Next.js 15 (App
+Router), TypeScript, and Tailwind CSS v4.
 
 ## Tech stack
 
@@ -33,6 +35,16 @@ npm run build   # Type-check + production build
 
 ## Editing content
 
+### Theme
+
+Colors are semantic CSS variables defined in [`app/globals.css`](app/globals.css):
+the dark values live in `@theme`, and `:root[data-theme="light"]` overrides them.
+`components/ThemeToggle.tsx` flips the `data-theme` attribute on `<html>` and
+persists the choice in `localStorage`; a small inline script in
+[`app/layout.tsx`](app/layout.tsx) applies the saved theme before paint to avoid
+a flash. To add a color, add a `--color-*` token for both themes and use the
+matching Tailwind utility.
+
 All copy lives in one place — [`lib/data.ts`](lib/data.ts). Update the
 `profile`, `stats`, `experience`, `projects`, and `skills` objects there and
 the page updates automatically. No component changes needed for routine content
@@ -62,6 +74,7 @@ app/
   page.tsx        # Assembles all sections + footer
   globals.css     # Tailwind + theme tokens (colors, fonts)
 components/        # Nav, Hero, About, Experience, Projects, Skills, Contact, icons
+  ThemeToggle.tsx  # Light/dark theme switch
 lib/data.ts       # Single source of truth for all content
 public/cv.html    # Downloadable résumé
 ```
